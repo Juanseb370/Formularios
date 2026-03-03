@@ -14,6 +14,7 @@ document.getElementById("imagen").addEventListener("change", function(event) {
     }
 });
 
+
 document.getElementById("productoForm").addEventListener("submit", function(event) {
     event.preventDefault();
     
@@ -28,7 +29,7 @@ document.getElementById("productoForm").addEventListener("submit", function(even
         return;
     }
     if (!nombre || !precio || !categoria) {
-        alert ("por favor, cmpleta todos los campos");
+        alert ("por favor, completa todos los campos");
         return;
     }
 
@@ -37,7 +38,7 @@ document.getElementById("productoForm").addEventListener("submit", function(even
 
     localStorage.setItem("productos", JSON.stringify(productos));
 
-    alert("Producto guardado en LocalStorage");
+    alert("Producto guardado en LocalStorage 👌");
 
     location.reload()
 });
