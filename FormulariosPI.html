@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="CSS/formularioPI.css">
+</head>
+<body>
+    <div class="container">
+        <h2> Formulario Chat de Seguridad</h2>
+
+        <form action="" method="get" class="form-container" id="productoForm">
+            <div class="form-group">
+                <label for="nombre"> INFORMACION CASO</label>
+                <input type="text" id="nombre" placeholder="Ingresa información" required minlength="3" maxlength="20">
+            </div>
+            <div class="form-group">
+                <label for="precio"> UBICACION DEL CASO:</label>
+                <input type="text" id="precio" placeholder="Ingrese la direccion o lugar de referencia" required min="1" max="1000000000">
+            </div>
+            <div class="form-group">
+                <label for="marca">TIPO DE DELITO</label>
+                <input type="text" name="marca" id="marca" placeholder="Ingrese el tipo de delito">
+            </div>
+            <div class="from-group">
+                <label for="categoria">NIVELES DE RIESGO</label>
+                <select id="categoria" required>
+                    <option value=""> Selecione un Nivel</option>
+                    <option value="electronica">nivel 1 - bajo riesgo</option>
+                    <option value="ropa">nivel 2 - riesgo medio</option>
+                    <option value="hogar">nivel 3- riesgo alto</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+            <div class="form-group full-widt">
+                <label for="descripcion"> Descripcion:</label>
+                <textarea placeholder="Ingrese la descripcion" id="descripcion" required></textarea>
+            </div>
+            <div class="form-group full-width">
+                <label for="imagen"> Evidencia o Foto del Lugar</label>
+                <input type="file" id="imagen" accept="image/*" required>
+                <img class="preview-img"  id="previewImg"  alt="Vista previa">
+            </div>
+            <div class="button-container">
+                <button id="btnAgregar" type="submit">Enviar Información</button>
+            </div>
+        </form>
+    </div>
+    <script src="JS/formulario.js"></script>
+</body>
+</html>
